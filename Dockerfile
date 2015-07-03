@@ -23,9 +23,6 @@ RUN /bin/bash -c 'cd /tmp/nuget && ./build.sh'
 #CMD ['/tmp/nuget/build.sh']
 RUN sudo cp /tmp/nuget/lib/NuGet.exe /usr/bin/NuGet.exe
 
-# Add Integrate NuGet source
-RUN  mono /usr/bin/NuGet.exe sources Add -Name Integrate -Source 'https://www.myget.org/F/integrate/auth/dda94e9b-6e72-41f0-8afa-d87526e5ec7f/'
-
 #CMD ["alias nuget='mono /usr/bin/NuGet.exe'"]
 
 # alias 'nuget' for easy executions
